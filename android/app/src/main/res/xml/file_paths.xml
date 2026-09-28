@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+      path="." mencakup SELURUH folder internal aplikasi (context.getFilesDir()),
+      supaya cocok di mana pun path_provider menaruh filenya. Sebelumnya hanya
+      folder "sounds/" langsung di root yang diizinkan, padahal
+      getApplicationDocumentsDirectory() sebenarnya menaruh file di dalam
+      subfolder "app_flutter/", sehingga FileProvider gagal menemukan file
+      suara custom dan diam-diam gagal (makanya suara balik ke bawaan).
+    -->
+    <files-path name="internal_files" path="." />
+</paths>
